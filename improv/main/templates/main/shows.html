@@ -1,4 +1,36 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+{% include 'main/menu.html' %}
+
+<div class="show-wrapper">
+{% for show in shows %}
+<div class="show-box">
+    <img class="portrait" src="{{ show.image.url }}"></img>
+    <div class="info-box">
+        <div>
+            <h2>{{ show.name }}</h2>
+            <h4>{{ show.tagline }}</h4>
+        </div>
+        <p>{{ show.description }}</p>
+        <div class="date-box">
+            <p>{{ show.time|date:"M d, Y" }}</p>
+            <p>{{ show.time|time:"H:i" }}</p>
+        </div>
+    </div>
+    <div class="address-box">
+        <div>
+            <h4 class="address location">{{ show.location }}</h4>
+            <h4 class="address">{{ show.address|upper }}</h4>
+            <h4 class="address postcode">
+                {{ show.postcode }}, {{ show.city|upper }}
+            </h4>
+        </div>
+        <a class="buy" href="#"><div class="button">tickets</div></a>
+    </div>
+</div>
+{% endfor %}
+</div>
+
 {% endblock content %}

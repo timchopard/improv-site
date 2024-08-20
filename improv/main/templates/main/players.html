@@ -1,4 +1,19 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+{% include 'main/menu.html' %}
+<div class="main-title">
+    <h2>Players</h2>
+    <p>Improv comedy does not work well without people perforiming it. Below are our wonderful players.</p>
+</div>
+<div class="main-area">
+    {% for player in players %}
+    <div class="player">
+        <img class="portrait" src="{{ player.photo.url }}"></img>
+        <h3>{{ player.name|capfirst }}</h3>
+        {% comment %} <p>{{ player.description }}</p> {% endcomment %}
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}

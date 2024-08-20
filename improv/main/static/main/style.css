@@ -9,10 +9,11 @@ body {
     min-height: 100vh;
     height: 100vh;
     background-color: var(--dark-gray);
-    background-image: var(--bg-noise);
+    /* background-image: url(ffflux.svg); */
+    background-image: url(ssscribble.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: blur(2rem);
+    /* backdrop-filter: blur(5rem); */
 }
 
 div.squiggle {
@@ -62,7 +63,8 @@ div.navbar-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--dark-gray);
+    /* background-color: var(--dark-gray); */
+    background-color: #353535cc;
 }
 
 div.home-navbar-wrapper {
@@ -100,4 +102,166 @@ a.menu {
 
 a.menu:hover {
     color: var(--pink);
+}
+
+img.portrait {
+    background-color: #353535;
+    max-height: 15rem;
+    min-height: 15rem;
+    min-width: 15rem;
+    max-width: 15rem;
+    border-radius: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+div.main-area {
+    width: 52rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;align-self: auto;
+    flex-wrap: wrap;
+    background-color: #1a1a1a;
+    border-radius: 2.5rem;
+    padding: 1.5rem;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+div.player {
+    max-width: 15rem;
+    min-width: 15rem;
+    background-color: antiquewhite;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+div.player h3 {
+    display: inline-block;
+    margin: auto;
+    max-width: fit-content;
+    text-align: end;
+    min-width: 90%;
+    max-width: 90%;
+    font-family: "Permanent Marker", sans-serif;
+}
+
+div.main-title {
+    min-width: 40rem;
+    max-width: 40rem;
+    margin: auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+div.main-title h2 {
+    margin: 0;
+}
+
+div.main-title p {
+    color: antiquewhite;
+    font-family: "Dosis", sans-serif;
+}
+
+div.show-wrapper {
+    padding-top: 5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 54rem;
+}
+
+div.show-box {
+    display: flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+div.info-box {
+    margin-left: 2rem;
+    max-width: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.address-box {
+    max-width: 10rem;
+    min-width: 10rem;
+    background-color: aquamarine;
+    margin-left: auto;
+    margin: 0.7rem;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    background-color: #35353599;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+h4.address {
+    font-size: 0.8rem;
+    font-family: "Dosis", sans-serif;
+    color: #353535;
+}
+
+h4.location {
+    color: #1a1a1a;
+}
+
+.button {
+    margin-top: auto;
+    text-align: center;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 1.4rem;
+}
+
+a.buy {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--orange);
+}
+
+a.buy:hover {
+    color: var(--orange);
+    background-color: var(--pink);
+}
+
+.info-box h2 {
+    color: var(--orange);
+    font-size: 2rem;
+}
+
+.info-box h4 {
+    color: #353535bb;
+    font-size: 1.2rem;
+    font-family: "Caveat", sans-serif;
+}
+
+.info-box p {
+    font-family: "Dosis", sans-serif;
+    margin-top: 1rem;
+}
+
+.date-box {
+    display: flex;
+    flex-direction: row;
+    color: #353535;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.date-box p {
+    padding: 0;
+    margin: 0;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
 }

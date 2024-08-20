@@ -4,16 +4,21 @@ from .models import Player, Show
 from datetime import datetime
 
 def index(request):
-    context = {}
+    context = {
+        "title": "unwritten Improv",
+    }
     return render(request, "main/index.html", context)
 
 def about(request):
-    context = {}
+    context = {
+        "title": "About",
+    }
     return render(request, "main/about.html", context)
 
 def shows(request):
 
     context = {
+        "title": "Shows",
         "shows": Show.objects.filter(
             time__gte=datetime.now().date()
         ).order_by('time')
@@ -22,6 +27,7 @@ def shows(request):
 
 def players(request):
     context = {
+        "title": "Players",
         "players": Player.objects.filter(active=True).order_by('?'),
     }
     print(context["players"][0].photo.url)

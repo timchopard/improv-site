@@ -1,0 +1,15 @@
+{% if not is_home %}
+<div class="navbar-wrapper">
+    <div class="small-logo"></div>
+{% else %}
+<div class="home-navbar-wrapper">
+{% endif %}
+<div class="navbar">
+    {% if not is_home %}
+    <a class="menu" href="{% url 'index' %}">home</a>
+    {% endif %}
+    <a class="menu" href="{% url 'about' %}">about</a>
+    <a class="menu" href="{% url 'shows' %}">shows</a>
+    <a class="menu" href="{% url 'players' %}">players</a>
+</div>
+</div>

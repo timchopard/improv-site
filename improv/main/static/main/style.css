@@ -13,6 +13,8 @@ body {
     background-image: url(ssscribble.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     /* backdrop-filter: blur(5rem); */
 }
 
@@ -70,7 +72,13 @@ div.navbar-wrapper {
 div.home-navbar-wrapper {
     max-width: fit-content;
     margin: auto;
-    margin-top: 25rem;
+    margin-bottom: 1rem;
+    background-color: #353535aa;
+    border-radius: 2rem;
+}
+
+div.home-navbar-wrapper .navbar {
+    margin-bottom: 0.5rem;
 }
 
 div.small-logo {
@@ -98,6 +106,10 @@ a.menu {
     text-decoration: none;
     font-size: 1.4rem;
     color: var(--orange);
+}
+
+div.home-navbar-wrapper .navbar a.menu {
+    font-size: 2rem;
 }
 
 a.menu:hover {
